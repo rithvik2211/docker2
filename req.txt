@@ -1,0 +1,5 @@
+selenium
+pandas
+requests
+boto3
+Pillow
