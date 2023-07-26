@@ -10,7 +10,7 @@ COPY . .
 # ENV region = eu-north-1
 
 
-RUN pip3 install -r req.txt
+
 
 RUN apt update
 RUN apt install sudo
@@ -21,5 +21,6 @@ RUN wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key
 RUN sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main"
 RUN echo "y" | sudo apt install microsoft-edge-stable
 
+RUN pip3 install -r req.txt
 CMD ["python3", "form_filler.py"]
 
